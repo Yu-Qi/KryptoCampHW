@@ -28,9 +28,12 @@ import React from 'react';
 const ToDo = ({todo, handleToggle}) => {
     return (
         <div className={todo.complete ? "strike" : ""}>
-            <button style={{margin: '20px'}} onClick={() => handleToggle(3)}>Done</button>
-            {todo.task +"~~~"+ todo.complete}
+            <button style={{margin: '20px'}} onClick={() => handleToggle(todo.id)}> { todo.complete ? "NotYet":"Done"}</button>
+            <input className={todo.complete ? "strike" : ""} defaultValue={todo.task}>
+            </input>
+            {/* {todo.task}    {""+todo.complete} */}
         </div>
+
     );
 };
 

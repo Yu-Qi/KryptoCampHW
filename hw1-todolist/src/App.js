@@ -7,6 +7,7 @@ function App() {
   const [toDoList, setToDoList] = useState(data); //todo
   const handleToggle = (id) => {
     let mapped = toDoList.map((task) => {
+      console.log("debug~~~~~~", id)
       return task.id == id
         ? { ...task, complete: !task.complete }
         : { ...task };
@@ -22,14 +23,13 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={() => handleToggle(3)}>Test</button>
+      {/* <button onClick={() => handleToggle(3)}>Test</button> */}
       <Header />
       <ToDoList
         toDoList={toDoList}
         handleFilter={handleFilter}
         handleToggle={handleToggle}
       />{" "}
-      {/* 為什麼不用寫那個props啥的 */}
     </div>
   );
 }
