@@ -20,7 +20,32 @@ table {
 }
 table tr {
 	display: table-cell;
+  vertical-align: top;
 }
 table tr td {
 	display: block;
+}
+
+thead {
+  text-align: left;
+}
+
+
+.button4 {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+
+
+.addTaskBtn {
+  background-color: #049faa;
+
 }

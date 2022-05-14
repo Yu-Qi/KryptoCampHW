@@ -41,13 +41,13 @@ const TEST = ({test}) => {
                 <td>
                 <form onSubmit={handleSubmit}>
             <input value={userInput} type="text" onChange={handleChange} placeholder="Enter task..."/>
-            <button>Submit</button>
+            <button class="addTaskBtn">Submit</button>
                 </form>
                 </td>
             {toDoList.map(function(todo){
             return  ( <ToDo todo={todo} handleToggle={handleToggle}/>
             );})}
-            <button style={{margin: '20px'}} onClick={handleFilter}>清除已完成工作</button>
+            <td><button style={{margin: '40px'}} onClick={handleFilter}>清除已完成工作</button></td>
         </tr>
     );
 };
